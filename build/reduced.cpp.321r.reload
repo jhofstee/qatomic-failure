@@ -1,0 +1,541 @@
+
+;; Function testing (_Z7testingv, funcdef_no=5, decl_uid=6197, cgraph_uid=6, symbol_order=5)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 13
+New elimination table:
+Can eliminate 103 to 13 (offset=28, prev_offset=-1)
+Can't eliminate 103 to 102 (offset=8, prev_offset=-1)
+Can eliminate 103 to 11 (offset=-4, prev_offset=-1)
+Can't eliminate 103 to 7 (offset=0, prev_offset=-1)
+Can eliminate 102 to 13 (offset=24, prev_offset=-1)
+Can eliminate 102 to 11 (offset=-8, prev_offset=-1)
+Can't eliminate 102 to 7 (offset=0, prev_offset=-1)
+      Removing equiv init insn 6 (freq=1000)
+    6: r118:SI=sfp:SI+0x10
+      REG_EQUIV sfp:SI-0x8
+deleting insn with uid = 6.
+Changing pseudo 118 in operand 1 of insn 7 on equiv sfp:SI+0x10
+         Considering alt=0 of insn 7:   (0) =rk  (1) rk
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          overall=9,losers=1,rld_nregs=1
+         Considering alt=1 of insn 7:   (0) r  (1) I
+            Bad operand -- refuse
+         Considering alt=2 of insn 7:   (0) r  (1) K
+            Bad operand -- refuse
+         Considering alt=3 of insn 7:   (0) r  (1) j
+            Bad operand -- refuse
+         Considering alt=4 of insn 7:   (0) rk  (1) mi
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Spill Non-pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            1 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+         Considering alt=5 of insn 7:   (0) m  (1) rk
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+         Considering alt=6 of insn 7:   (0) *t  (1) r
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=7 of insn 7:   (0) r  (1) t
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          overall=9,losers=1,rld_nregs=1
+         Considering alt=8 of insn 7:   (0) *t  (1) *t
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=9 of insn 7:   (0) *t  (1) *Uvi
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=10 of insn 7:   (0) *Uv  (1) *t
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+      Choosing alt 0 in insn 7:  (0) =rk  (1) rk {*arm_movsi_vfp}
+      Creating newreg=126, assigning class CORE_REGS to r126
+    7: r0:SI=r126:SI
+      REG_EQUAL sfp:SI-0x8
+    Inserting insn reload before:
+   41: r126:SI=sfp:SI+0x10
+
+         Considering alt=4 of insn 41:   (0) r  (1) rk  (2) rI
+            0 Non pseudo reload: reject++
+          overall=1,losers=0,rld_nregs=0
+         Considering alt=4 of insn 41:   (0) r  (1) rk  (2) rI
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=5 of insn 41:   (0) k  (1) k  (2) rI
+            Bad operand -- refuse
+         Considering alt=6 of insn 41:   (0) r  (1) r  (2) k
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=7 of insn 41:   (0) k  (1) r  (2) rI
+            Bad operand -- refuse
+         Considering alt=10 of insn 41:   (0) r  (1) rk  (2) L
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=11 of insn 41:   (0) k  (1) k  (2) L
+            Bad operand -- refuse
+         Considering alt=12 of insn 41:   (0) k  (1) r  (2) L
+            Bad operand -- refuse
+         Considering alt=15 of insn 41:   (0) r  (1) rk  (2) ?n
+            Staticly defined alt reject+=6
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=16,losers=1 -- refuse
+      Choosing alt 4 in insn 41:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+      Change to class GENERAL_REGS for r126
+         Considering alt=0 of insn 20:   (0) =w  (1) w
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          overall=609,losers=1,rld_nregs=2
+         Considering alt=1 of insn 20:   (0) Un  (1) w
+            0 Operand reload: losers++
+            0 Spill pseudo into memory: reject+=3
+            0 Spill vector pseudo: reject+=2
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          overall=24,losers=2,rld_nregs=2
+         Considering alt=2 of insn 20:   (0) w  (1) Dm
+            Bad operand -- refuse
+         Considering alt=3 of insn 20:   (0) w  (1) Dn
+            Bad operand -- refuse
+         Considering alt=4 of insn 20:   (0) w  (1) Uni
+          overall=0,losers=0,rld_nregs=0
+      Choosing alt 4 in insn 20:  (0) w  (1) Uni {*neon_movv2si}
+         Considering alt=0 of insn 21:   (0) =w  (1) w
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          overall=609,losers=1,rld_nregs=2
+         Considering alt=1 of insn 21:   (0) Un  (1) w
+          overall=0,losers=0,rld_nregs=0
+      Choosing alt 1 in insn 21:  (0) Un  (1) w {*neon_movv2si}
+         Considering alt=0 of insn 26:   (0) =rk  (1) rk
+            1 Operand reload: losers++
+            Cycle danger: overall += LRA_MAX_REJECT
+          overall=606,losers=1,rld_nregs=1
+         Considering alt=1 of insn 26:   (0) r  (1) I
+            Bad operand -- refuse
+         Considering alt=2 of insn 26:   (0) r  (1) K
+            Bad operand -- refuse
+         Considering alt=3 of insn 26:   (0) r  (1) j
+            Bad operand -- refuse
+         Considering alt=4 of insn 26:   (0) rk  (1) mi
+            1 Operand reload: losers++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          overall=12,losers=1,rld_nregs=0
+         Considering alt=5 of insn 26:   (0) m  (1) rk
+            0 Operand reload: losers++
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            overall=13,losers=1 -- refuse
+         Considering alt=6 of insn 26:   (0) *t  (1) r
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non input pseudo reload: reject++
+            1 Operand reload: losers++
+            overall=14,losers=2 -- refuse
+         Considering alt=7 of insn 26:   (0) r  (1) t
+          overall=0,losers=0,rld_nregs=0
+      Choosing alt 7 in insn 26:  (0) r  (1) t {*arm_movsi_vfp}
+         Considering alt=0 of insn 27:   (0) +Ua  (1) rn  (3) =&r  (4) =&r
+            3 Scratch win: reject+=2
+            4 Scratch win: reject+=2
+            3 Matched conflict early clobber reloads: losers++
+          overall=9,losers=1,rld_nregs=0
+      Choosing alt 0 in insn 27:  (0) +Ua  (1) rn  (3) =&r  (4) =&r {atomic_addsi}
+      Creating newreg=127 from oldreg=123, assigning class GENERAL_REGS to r127
+         Considering alt=4 of insn 33:   (0) r  (1) rk  (2) rI
+          overall=0,losers=0,rld_nregs=0
+         Considering alt=4 of insn 33:   (0) r  (1) rk  (2) rI
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=9,losers=1 -- refuse
+         Considering alt=5 of insn 33:   (0) k  (1) k  (2) rI
+            Bad operand -- refuse
+         Considering alt=6 of insn 33:   (0) r  (1) r  (2) k
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=9,losers=1 -- refuse
+         Considering alt=7 of insn 33:   (0) k  (1) r  (2) rI
+            Bad operand -- refuse
+         Considering alt=10 of insn 33:   (0) r  (1) rk  (2) L
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=9,losers=1 -- refuse
+         Considering alt=11 of insn 33:   (0) k  (1) k  (2) L
+            Bad operand -- refuse
+         Considering alt=12 of insn 33:   (0) k  (1) r  (2) L
+            Bad operand -- refuse
+         Considering alt=15 of insn 33:   (0) r  (1) rk  (2) ?n
+            Staticly defined alt reject+=6
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+      Choosing alt 4 in insn 33:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+Changing pseudo 118 in operand 1 of insn 34 on equiv sfp:SI+0x10
+         Considering alt=0 of insn 34:   (0) =rk  (1) rk
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          overall=9,losers=1,rld_nregs=1
+         Considering alt=1 of insn 34:   (0) r  (1) I
+            Bad operand -- refuse
+         Considering alt=2 of insn 34:   (0) r  (1) K
+            Bad operand -- refuse
+         Considering alt=3 of insn 34:   (0) r  (1) j
+            Bad operand -- refuse
+         Considering alt=4 of insn 34:   (0) rk  (1) mi
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Spill Non-pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            1 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+         Considering alt=5 of insn 34:   (0) m  (1) rk
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+         Considering alt=6 of insn 34:   (0) *t  (1) r
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=7 of insn 34:   (0) r  (1) t
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          overall=9,losers=1,rld_nregs=1
+         Considering alt=8 of insn 34:   (0) *t  (1) *t
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=9 of insn 34:   (0) *t  (1) *Uvi
+            0 Costly loser: reject++
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=10 of insn 34:   (0) *Uv  (1) *t
+            0 Operand reload: losers++
+            0 Non-pseudo reload: reject+=2
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            overall=15,losers=1 -- refuse
+      Choosing alt 0 in insn 34:  (0) =rk  (1) rk {*arm_movsi_vfp}
+      Creating newreg=128, assigning class CORE_REGS to r128
+   34: r0:SI=r128:SI
+      REG_DEAD r118:SI
+      REG_EQUAL sfp:SI-0x8
+    Inserting insn reload before:
+   42: r128:SI=sfp:SI+0x10
+
+         Considering alt=4 of insn 42:   (0) r  (1) rk  (2) rI
+            0 Non pseudo reload: reject++
+          overall=1,losers=0,rld_nregs=0
+         Considering alt=4 of insn 42:   (0) r  (1) rk  (2) rI
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=5 of insn 42:   (0) k  (1) k  (2) rI
+            Bad operand -- refuse
+         Considering alt=6 of insn 42:   (0) r  (1) r  (2) k
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=7 of insn 42:   (0) k  (1) r  (2) rI
+            Bad operand -- refuse
+         Considering alt=10 of insn 42:   (0) r  (1) rk  (2) L
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=10,losers=1 -- refuse
+         Considering alt=11 of insn 42:   (0) k  (1) k  (2) L
+            Bad operand -- refuse
+         Considering alt=12 of insn 42:   (0) k  (1) r  (2) L
+            Bad operand -- refuse
+         Considering alt=15 of insn 42:   (0) r  (1) rk  (2) ?n
+            Staticly defined alt reject+=6
+            0 Non pseudo reload: reject++
+            1 Operand reload: losers++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            overall=16,losers=1 -- refuse
+      Choosing alt 4 in insn 42:  (0) r  (1) rk  (2) rI {*arm_addsi3}
+      Change to class GENERAL_REGS for r128
+	   Spilling non-eliminable hard regs: 13
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 35: point = 0, n_alt = -1
+   Insn 34: point = 0, n_alt = 0
+	Hard reg 0 is preferable by r128 with profit 1000
+   Insn 42: point = 1, n_alt = 4
+   Insn 33: point = 2, n_alt = 4
+   Insn 27: point = 2, n_alt = 0
+   Insn 26: point = 4, n_alt = 7
+   Insn 21: point = 6, n_alt = 1
+   Insn 20: point = 6, n_alt = 4
+   Insn 15: point = 7, n_alt = -1
+   Insn 14: point = 7, n_alt = -2
+   Insn 8: point = 7, n_alt = -1
+   Insn 7: point = 7, n_alt = 0
+	Hard reg 0 is preferable by r126 with profit 1000
+   Insn 41: point = 8, n_alt = 4
+ r114: [5..6]
+ r120: [3..4]
+ r124: [2..3]
+ r126: [7..8]
+ r127: [2..3]
+ r128: [0..1]
+Compressing live ranges: from 9 to 9 - 100%
+Ranges after the compression:
+ r114: [5..6]
+ r120: [3..4]
+ r124: [2..3]
+ r126: [7..8]
+ r127: [2..3]
+ r128: [0..1]
+
+********** Assignment #1: **********
+
+	 Assigning to 126 (cl=GENERAL_REGS, orig=126, freq=2000, tfirst=126, tfreq=2000)...
+	   Assign 0 to reload r126 (freq=2000)
+	 Assigning to 128 (cl=GENERAL_REGS, orig=128, freq=2000, tfirst=128, tfreq=2000)...
+	   Assign 0 to reload r128 (freq=2000)
+	 Assigning to 127 (cl=GENERAL_REGS, orig=123, freq=1000, tfirst=127, tfreq=1000)...
+	   Assign 1 to reload r127 (freq=1000)
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 13
+	   Spilling non-eliminable hard regs: 13
+New elimination table:
+Can eliminate 103 to 13 (offset=28, prev_offset=28)
+Can't eliminate 103 to 102 (offset=8, prev_offset=-1)
+Can eliminate 103 to 11 (offset=-4, prev_offset=-1)
+Can't eliminate 103 to 7 (offset=0, prev_offset=-1)
+Can eliminate 102 to 13 (offset=24, prev_offset=24)
+Can eliminate 102 to 11 (offset=-8, prev_offset=-1)
+Can't eliminate 102 to 7 (offset=0, prev_offset=-1)
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 26
+changing reg in insn 27
+changing reg in insn 27
+changing reg in insn 27
+deleting insn with uid = 7.
+deleting insn with uid = 34.
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 8.
+verify found no changes in insn with uid = 15.
+verify found no changes in insn with uid = 35.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+
+
+testing
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 107 [ra_auth_code]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 13 [sp]
+;;  eh block artificial uses 	 13 [sp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15]
+;;  exit block uses 	 13 [sp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 13 [sp] 14 [lr] 30 [s14] 31 [s15] 100 [cc]
+;;  ref usage 	r0={7d,3u} r1={6d,1u} r2={5d} r3={5d,2u} r12={6d} r13={1d,15u} r14={4d} r15={3d} r16={4d} r17={4d} r18={4d} r19={4d} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={5d,2u} r31={5d,1u} r48={3d} r49={3d} r50={3d} r51={3d} r52={3d} r53={3d} r54={3d} r55={3d} r56={3d} r57={3d} r58={3d} r59={3d} r60={3d} r61={3d} r62={3d} r63={3d} r64={3d} r65={3d} r66={3d} r67={3d} r68={3d} r69={3d} r70={3d} r71={3d} r72={3d} r73={3d} r74={3d} r75={3d} r76={3d} r77={3d} r78={3d} r79={3d} r80={3d} r81={3d} r82={3d} r83={3d} r84={3d} r85={3d} r86={3d} r87={3d} r88={3d} r89={3d} r90={3d} r91={3d} r92={3d} r93={3d} r94={3d} r95={3d} r96={3d} r97={3d} r98={3d} r99={3d} r100={4d} r101={3d} r102={1e} r104={3d} r105={3d} r106={3d} r107={3d} 
+;;    total ref usage 303{278d,24u,1e} in 28{25 regular + 3 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 13 2 NOTE_INSN_FUNCTION_BEG)
+(note 13 2 31 2 NOTE_INSN_DELETED)
+(note 31 13 5 2 NOTE_INSN_DELETED)
+(debug_insn 5 31 6 2 (debug_marker) "../reduced.cpp":21:3 -1
+     (nil))
+(note 6 5 41 2 NOTE_INSN_DELETED)
+(insn 41 6 8 2 (set (reg:SI 0 r0 [126])
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 16 [0x10]))) "../reduced.cpp":21:5 7 {*arm_addsi3}
+     (nil))
+(call_insn 8 41 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >) [0 __ct_comp  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":21:5 295 {*call_value_symbol}
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 9 8 10 2 (debug_marker) "../reduced.cpp":22:3 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI this (plus:SI (reg/f:SI 13 sp)
+        (const_int 16 [0x10]))) "../reduced.cpp":22:3 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "../reduced.cpp":9:10 -1
+     (nil))
+(debug_insn 12 11 14 2 (debug_marker) "../reduced.cpp":10:9 -1
+     (nil))
+(insn 14 12 15 2 (set (reg:SI 0 r0)
+        (reg/f:SI 13 sp)) "../reduced.cpp":10:11 765 {*arm_movsi_vfp}
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >) [0 __ct_comp  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":10:11 295 {*call_value_symbol}
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 16 15 17 2 (debug_marker) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 17 16 18 2 (var_location:SI this (plus:SI (reg/f:SI 13 sp)
+        (const_int 8 [0x8]))) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 18 17 19 2 (var_location:SI other (reg/f:SI 13 sp)) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker:BLK) "../reduced.cpp":13:5 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:V2SI 30 s14 [orig:114 vect__5.8 ] [114])
+        (mem/c:V2SI (reg/f:SI 13 sp) [0 MEM <vector(2) unsigned int> [(void *)&dummy]+0 S8 A64])) "../reduced.cpp":13:27 1082 {*neon_movv2si}
+     (expr_list:REG_EQUIV (mem/c:V2SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM <vector(2) unsigned int> [(void *)&dummy]+0 S8 A64])
+        (nil)))
+(insn 21 20 22 2 (set (mem/c:V2SI (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])) [0 MEM <vector(2) unsigned int> [(void *)&D.6228]+0 S8 A64])
+        (reg:V2SI 30 s14 [orig:114 vect__5.8 ] [114])) "../reduced.cpp":13:19 1082 {*neon_movv2si}
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "../reduced.cpp":14:9 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:SI this (mem/f/c:SI (reg/f:SI 13 sp) [2 dummy.d+0 S4 A64])) "../reduced.cpp":14:9 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker:BLK) "../reduced.cpp":3:8 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "../reduced.cpp":3:15 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 3 r3 [orig:120 _16 ] [120])
+        (reg:SI 30 s14 [orig:114 vect__5.8 ] [114])) "../reduced.cpp":3:33 765 {*arm_movsi_vfp}
+     (nil))
+(insn 27 26 28 2 (parallel [
+            (set (mem/v:SI (reg:SI 3 r3 [orig:120 _16 ] [120]) [-1  S4 A32])
+                (unspec_volatile:SI [
+                        (plus:SI (mem/v:SI (reg:SI 3 r3 [orig:120 _16 ] [120]) [-1  S4 A32])
+                            (const_int 1 [0x1]))
+                        (const_int 0 [0])
+                    ] VUNSPEC_ATOMIC_OP))
+            (clobber (reg:CC 100 cc))
+            (clobber (reg:SI 1 r1 [123]))
+            (clobber (reg:SI 2 r2 [124]))
+        ]) "../reduced.cpp":3:33 3103 {atomic_addsi}
+     (nil))
+(debug_insn 28 27 29 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":14:15 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":11:18 -1
+     (nil))
+(debug_insn 30 29 33 2 (var_location:SI other (clobber (const_int 0 [0]))) "../reduced.cpp":11:18 -1
+     (nil))
+(insn 33 30 42 2 (set (reg:SI 1 r1)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 8 [0x8]))) "../reduced.cpp":11:18 discrim 1 7 {*arm_addsi3}
+     (nil))
+(insn 42 33 35 2 (set (reg:SI 0 r0 [128])
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 16 [0x10]))) "../reduced.cpp":11:18 discrim 1 7 {*arm_addsi3}
+     (nil))
+(call_insn 35 42 36 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZN1B9insertOneES_") [flags 0x41]  <function_decl 0x71c032529200 insertOne>) [0 insertOne S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":11:18 discrim 1 294 {*call_symbol}
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1B9insertOneES_") [flags 0x41]  <function_decl 0x71c032529200 insertOne>)
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(debug_insn 36 35 39 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":22:15 -1
+     (nil))
+(note 39 36 40 NOTE_INSN_DELETED)
+(note 40 39 0 NOTE_INSN_DELETED)

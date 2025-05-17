@@ -1,0 +1,280 @@
+
+;; Function testing (_Z7testingv, funcdef_no=5, decl_uid=6197, cgraph_uid=6, symbol_order=5)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+
+
+testing
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 107 [ra_auth_code]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 11 [fp] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 11 [fp] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={7d,3u} r1={5d,1u} r2={4d} r3={4d} r11={1d,2u} r12={6d} r13={1d,5u} r14={4d} r15={3d} r16={4d} r17={4d} r18={4d} r19={4d} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r48={3d} r49={3d} r50={3d} r51={3d} r52={3d} r53={3d} r54={3d} r55={3d} r56={3d} r57={3d} r58={3d} r59={3d} r60={3d} r61={3d} r62={3d} r63={3d} r64={3d} r65={3d} r66={3d} r67={3d} r68={3d} r69={3d} r70={3d} r71={3d} r72={3d} r73={3d} r74={3d} r75={3d} r76={3d} r77={3d} r78={3d} r79={3d} r80={3d} r81={3d} r82={3d} r83={3d} r84={3d} r85={3d} r86={3d} r87={3d} r88={3d} r89={3d} r90={3d} r91={3d} r92={3d} r93={3d} r94={3d} r95={3d} r96={3d} r97={3d} r98={3d} r99={3d} r100={4d} r101={3d} r102={1d,11u,4e} r103={1d,1u} r104={3d} r105={3d} r106={3d} r107={3d} r114={1d,2u} r118={1d,2u} r119={1d,1u} r120={1d,2u} r121={1d,1u} 
+;;    total ref usage 316{281d,31u,4e} in 31{28 regular + 3 call} insns.
+;; Reaching defs:
+;;  sparse invalidated 	
+;;  dense invalidated 	0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275
+;;  reg->defs[] map:	0[0,6] 1[7,11] 2[12,15] 3[16,19] 11[20,20] 12[21,26] 13[27,27] 14[28,31] 15[32,34] 16[35,38] 17[39,42] 18[43,46] 19[47,50] 20[51,54] 21[55,58] 22[59,62] 23[63,66] 24[67,70] 25[71,74] 26[75,78] 27[79,82] 28[83,86] 29[87,90] 30[91,94] 31[95,98] 48[99,101] 49[102,104] 50[105,107] 51[108,110] 52[111,113] 53[114,116] 54[117,119] 55[120,122] 56[123,125] 57[126,128] 58[129,131] 59[132,134] 60[135,137] 61[138,140] 62[141,143] 63[144,146] 64[147,149] 65[150,152] 66[153,155] 67[156,158] 68[159,161] 69[162,164] 70[165,167] 71[168,170] 72[171,173] 73[174,176] 74[177,179] 75[180,182] 76[183,185] 77[186,188] 78[189,191] 79[192,194] 80[195,197] 81[198,200] 82[201,203] 83[204,206] 84[207,209] 85[210,212] 86[213,215] 87[216,218] 88[219,221] 89[222,224] 90[225,227] 91[228,230] 92[231,233] 93[234,236] 94[237,239] 95[240,242] 96[243,245] 97[246,248] 98[249,251] 99[252,254] 100[255,258] 101[259,261] 102[262,262] 103[263,263] 104[264,266] 105[267,269] 106[270,272] 107[273,275] 114[276,276] 118[277,277] 119[278,278] 120[279,279] 121[280,280] 
+
+( )->[0]->( 2 )
+;; bb 0 artificial_defs: { d6(0){ }d11(1){ }d15(2){ }d19(3){ }d20(11){ }d27(13){ }d31(14){ }d38(16){ }d42(17){ }d46(18){ }d50(19){ }d54(20){ }d58(21){ }d62(22){ }d66(23){ }d70(24){ }d74(25){ }d78(26){ }d82(27){ }d86(28){ }d90(29){ }d94(30){ }d98(31){ }d262(102){ }d263(103){ }}
+;; bb 0 artificial_uses: { }
+;; lr  in  	
+;; lr  use 	
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 11 [fp] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;; live  in  	
+;; live  gen 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 11 [fp] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;; live  kill	
+;; rd  in  	(0) 
+;; rd  gen 	(25) 0[6],1[11],2[15],3[19],11[20],13[27],14[31],16[38],17[42],18[46],19[50],20[54],21[58],22[62],23[66],24[70],25[74],26[78],27[82],28[86],29[90],30[94],31[98],102[262],103[263]
+;; rd  kill	(92) 0[0,1,2,3,4,5,6],1[7,8,9,10,11],2[12,13,14,15],3[16,17,18,19],11[20],13[27],14[28,29,30,31],16[35,36,37,38],17[39,40,41,42],18[43,44,45,46],19[47,48,49,50],20[51,52,53,54],21[55,56,57,58],22[59,60,61,62],23[63,64,65,66],24[67,68,69,70],25[71,72,73,74],26[75,76,77,78],27[79,80,81,82],28[83,84,85,86],29[87,88,89,90],30[91,92,93,94],31[95,96,97,98],102[262],103[263]
+;;  UD chains for artificial uses at top
+;; lr  out 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; live  out 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; rd  out 	(4) 11[20],13[27],102[262],103[263]
+;;  UD chains for artificial uses at bottom
+
+( 0 )->[2]->( 1 )
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(11){ d20(bb 0 insn -1) }u-1(13){ d27(bb 0 insn -1) }u-1(102){ d262(bb 0 insn -1) }u-1(103){ d263(bb 0 insn -1) }}
+;; lr  in  	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  use 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; lr  def 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 107 [ra_auth_code] 114 118 119 120 121
+;; live  in  	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; live  gen 	 0 [r0] 1 [r1] 114 118 119 120 121
+;; live  kill	 12 [ip] 14 [lr] 100 [cc]
+;; rd  in  	(4) 11[20],13[27],102[262],103[263]
+;; rd  gen 	(5) 114[276],118[277],119[278],120[279],121[280]
+;; rd  kill	(9) 14[28,29,30,31],114[276],118[277],119[278],120[279],121[280]
+;;  UD chains for artificial uses at top
+;; lr  out 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; live  out 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;; rd  out 	(4) 11[20],13[27],102[262],103[263]
+;;  UD chains for artificial uses at bottom
+;;   reg 11 { d20(bb 0 insn -1) }
+;;   reg 13 { d27(bb 0 insn -1) }
+;;   reg 102 { d262(bb 0 insn -1) }
+;;   reg 103 { d263(bb 0 insn -1) }
+
+( 2 )->[1]->( )
+;; bb 1 artificial_defs: { }
+;; bb 1 artificial_uses: { u-1(11){ d20(bb 0 insn -1) }u-1(13){ d27(bb 0 insn -1) }u-1(102){ d262(bb 0 insn -1) }}
+;; lr  in  	 11 [fp] 13 [sp] 102 [sfp]
+;; lr  use 	 11 [fp] 13 [sp] 102 [sfp]
+;; lr  def 	
+;; live  in  	 11 [fp] 13 [sp] 102 [sfp]
+;; live  gen 	
+;; live  kill	
+;; rd  in  	(4) 11[20],13[27],102[262],103[263]
+;; rd  gen 	(0) 
+;; rd  kill	(0) 
+;;  UD chains for artificial uses at top
+;; lr  out 	
+;; live  out 	
+;; rd  out 	(0) 
+;;  UD chains for artificial uses at bottom
+;;   reg 11 { d20(bb 0 insn -1) }
+;;   reg 13 { d27(bb 0 insn -1) }
+;;   reg 102 { d262(bb 0 insn -1) }
+
+Finding needed instructions:
+  Adding insn 35 to worklist
+  Adding insn 27 to worklist
+  Adding insn 21 to worklist
+  Adding insn 15 to worklist
+  Adding insn 8 to worklist
+Finished finding needed instructions:
+Processing use of (reg 13 sp) in insn 8:
+Processing use of (reg 0 r0) in insn 8:
+  Adding insn 7 to worklist
+Processing use of (reg 118) in insn 7:
+  Adding insn 6 to worklist
+Processing use of (reg 102 sfp) in insn 6:
+Processing use of (reg 13 sp) in insn 15:
+Processing use of (reg 0 r0) in insn 15:
+  Adding insn 14 to worklist
+Processing use of (reg 119) in insn 14:
+  Adding insn 13 to worklist
+Processing use of (reg 102 sfp) in insn 13:
+Processing use of (reg 102 sfp) in insn 21:
+Processing use of (reg 114 [ vect__5.8 ]) in insn 21:
+  Adding insn 20 to worklist
+Processing use of (reg 102 sfp) in insn 20:
+Processing use of (reg 120 [ _16 ]) in insn 27:
+  Adding insn 26 to worklist
+Processing use of (reg 120 [ _16 ]) in insn 27:
+Processing use of (subreg (reg 114 [ vect__5.8 ]) 0) in insn 26:
+Processing use of (reg 13 sp) in insn 35:
+Processing use of (reg 0 r0) in insn 35:
+  Adding insn 34 to worklist
+Processing use of (reg 1 r1) in insn 35:
+  Adding insn 33 to worklist
+Processing use of (reg 121) in insn 33:
+  Adding insn 31 to worklist
+Processing use of (reg 102 sfp) in insn 31:
+Processing use of (reg 118) in insn 34:
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+testing
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 107 [ra_auth_code]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 11 [fp] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 11 [fp] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={7d,3u} r1={5d,1u} r2={4d} r3={4d} r11={1d,2u} r12={6d} r13={1d,5u} r14={4d} r15={3d} r16={4d} r17={4d} r18={4d} r19={4d} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r48={3d} r49={3d} r50={3d} r51={3d} r52={3d} r53={3d} r54={3d} r55={3d} r56={3d} r57={3d} r58={3d} r59={3d} r60={3d} r61={3d} r62={3d} r63={3d} r64={3d} r65={3d} r66={3d} r67={3d} r68={3d} r69={3d} r70={3d} r71={3d} r72={3d} r73={3d} r74={3d} r75={3d} r76={3d} r77={3d} r78={3d} r79={3d} r80={3d} r81={3d} r82={3d} r83={3d} r84={3d} r85={3d} r86={3d} r87={3d} r88={3d} r89={3d} r90={3d} r91={3d} r92={3d} r93={3d} r94={3d} r95={3d} r96={3d} r97={3d} r98={3d} r99={3d} r100={4d} r101={3d} r102={1d,11u,4e} r103={1d,1u} r104={3d} r105={3d} r106={3d} r107={3d} r114={1d,2u} r118={1d,2u} r119={1d,1u} r120={1d,2u} r121={1d,1u} 
+;;    total ref usage 316{281d,31u,4e} in 31{28 regular + 3 call} insns.
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "../reduced.cpp":21:3 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 118)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -8 [0xfffffffffffffff8]))) "../reduced.cpp":21:5 7 {*arm_addsi3}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 0 r0)
+        (reg/f:SI 118)) "../reduced.cpp":21:5 765 {*arm_movsi_vfp}
+     (expr_list:REG_EQUAL (plus:SI (reg/f:SI 102 sfp)
+            (const_int -8 [0xfffffffffffffff8]))
+        (nil)))
+(call_insn 8 7 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >) [0 __ct_comp  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":21:5 295 {*call_value_symbol}
+     (expr_list:REG_UNUSED (reg:SI 0 r0)
+        (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >)
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 9 8 10 2 (debug_marker) "../reduced.cpp":22:3 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI this (plus:SI (reg/f:SI 102 sfp)
+        (const_int -8 [0xfffffffffffffff8]))) "../reduced.cpp":22:3 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "../reduced.cpp":9:10 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "../reduced.cpp":10:9 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 119)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -24 [0xffffffffffffffe8]))) "../reduced.cpp":10:11 7 {*arm_addsi3}
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 0 r0)
+        (reg/f:SI 119)) "../reduced.cpp":10:11 765 {*arm_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 119)
+        (expr_list:REG_EQUAL (plus:SI (reg/f:SI 102 sfp)
+                (const_int -24 [0xffffffffffffffe8]))
+            (nil))))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >) [0 __ct_comp  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":10:11 295 {*call_value_symbol}
+     (expr_list:REG_UNUSED (reg:SI 0 r0)
+        (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >)
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 16 15 17 2 (debug_marker) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 17 16 18 2 (var_location:SI this (plus:SI (reg/f:SI 102 sfp)
+        (const_int -16 [0xfffffffffffffff0]))) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 18 17 19 2 (var_location:SI other (plus:SI (reg/f:SI 102 sfp)
+        (const_int -24 [0xffffffffffffffe8]))) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker:BLK) "../reduced.cpp":13:5 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:V2SI 114 [ vect__5.8 ])
+        (mem/c:V2SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM <vector(2) unsigned int> [(void *)&dummy]+0 S8 A64])) "../reduced.cpp":13:27 1082 {*neon_movv2si}
+     (nil))
+(insn 21 20 22 2 (set (mem/c:V2SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -16 [0xfffffffffffffff0])) [0 MEM <vector(2) unsigned int> [(void *)&D.6228]+0 S8 A64])
+        (reg:V2SI 114 [ vect__5.8 ])) "../reduced.cpp":13:19 1082 {*neon_movv2si}
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "../reduced.cpp":14:9 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:SI this (mem/f/c:SI (plus:SI (reg/f:SI 102 sfp)
+            (const_int -24 [0xffffffffffffffe8])) [2 dummy.d+0 S4 A64])) "../reduced.cpp":14:9 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker:BLK) "../reduced.cpp":3:8 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "../reduced.cpp":3:15 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 120 [ _16 ])
+        (subreg:SI (reg:V2SI 114 [ vect__5.8 ]) 0)) "../reduced.cpp":3:33 765 {*arm_movsi_vfp}
+     (expr_list:REG_DEAD (reg:V2SI 114 [ vect__5.8 ])
+        (nil)))
+(insn 27 26 28 2 (parallel [
+            (set (mem/v:SI (reg:SI 120 [ _16 ]) [-1  S4 A32])
+                (unspec_volatile:SI [
+                        (plus:SI (mem/v:SI (reg:SI 120 [ _16 ]) [-1  S4 A32])
+                            (const_int 1 [0x1]))
+                        (const_int 0 [0])
+                    ] VUNSPEC_ATOMIC_OP))
+            (clobber (reg:CC 100 cc))
+            (clobber (scratch:SI))
+            (clobber (scratch:SI))
+        ]) "../reduced.cpp":3:33 3103 {atomic_addsi}
+     (expr_list:REG_DEAD (reg:SI 120 [ _16 ])
+        (expr_list:REG_UNUSED (reg:CC 100 cc)
+            (nil))))
+(debug_insn 28 27 29 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":14:15 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":11:18 -1
+     (nil))
+(debug_insn 30 29 31 2 (var_location:SI other (clobber (const_int 0 [0]))) "../reduced.cpp":11:18 -1
+     (nil))
+(insn 31 30 33 2 (set (reg/f:SI 121)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -16 [0xfffffffffffffff0]))) "../reduced.cpp":11:18 discrim 1 7 {*arm_addsi3}
+     (nil))
+(insn 33 31 34 2 (set (reg:SI 1 r1)
+        (reg/f:SI 121)) "../reduced.cpp":11:18 discrim 1 765 {*arm_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 121)
+        (expr_list:REG_EQUAL (plus:SI (reg/f:SI 102 sfp)
+                (const_int -16 [0xfffffffffffffff0]))
+            (nil))))
+(insn 34 33 35 2 (set (reg:SI 0 r0)
+        (reg/f:SI 118)) "../reduced.cpp":11:18 discrim 1 765 {*arm_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 118)
+        (expr_list:REG_EQUAL (plus:SI (reg/f:SI 102 sfp)
+                (const_int -8 [0xfffffffffffffff8]))
+            (nil))))
+(call_insn 35 34 36 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZN1B9insertOneES_") [flags 0x41]  <function_decl 0x71c032529200 insertOne>) [0 insertOne S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":11:18 discrim 1 294 {*call_symbol}
+     (expr_list:REG_DEAD (reg:SI 1 r1)
+        (expr_list:REG_DEAD (reg:SI 0 r0)
+            (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1B9insertOneES_") [flags 0x41]  <function_decl 0x71c032529200 insertOne>)
+                (nil))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(debug_insn 36 35 0 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":22:15 -1
+     (nil))

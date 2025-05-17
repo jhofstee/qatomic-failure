@@ -1,0 +1,297 @@
+
+;; Function testing (_Z7testingv, funcdef_no=5, decl_uid=6197, cgraph_uid=6, symbol_order=5)
+
+Starting decreasing number of live ranges...
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Removing SCRATCH to p123 in insn #27 (nop 3)
+Removing SCRATCH to p124 in insn #27 (nop 4)
+rescanning insn with uid = 27.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 3 n_edges 2 count 3 (    1)
+Reg 118 uninteresting
+Ignoring reg 114, has equiv memory
+Reg 120 uninteresting
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 1 for finding pseudo/allocno costs
+
+    r124: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    r123: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    r120: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    r118: preferred NO_REGS, alternative NO_REGS, allocno NO_REGS
+    a0 (r118,l0) best NO_REGS, allocno NO_REGS
+    r114: preferred VFP_LO_REGS, alternative NO_REGS, allocno VFP_LO_REGS
+
+  a0(r118,l0) costs: GENERAL_REGS:6000,6000 VFP_D0_D7_REGS:47000,47000 VFP_LO_REGS:47000,47000 ALL_REGS:122000,122000 MEM:32000,32000
+  a1(r120,l0) costs: GENERAL_REGS:0,0 VFP_D0_D7_REGS:30000,30000 VFP_LO_REGS:30000,30000 ALL_REGS:75000,75000 MEM:20000,20000
+  a2(r123,l0) costs: GENERAL_REGS:0,0 VFP_D0_D7_REGS:15000,15000 VFP_LO_REGS:15000,15000 ALL_REGS:40000,40000 MEM:10000,10000
+  a3(r124,l0) costs: GENERAL_REGS:0,0 VFP_D0_D7_REGS:15000,15000 VFP_LO_REGS:15000,15000 ALL_REGS:40000,40000 MEM:10000,10000
+  a4(r114,l0) costs: LO_REGS:45000,45000 HI_REGS:45000,45000 CALLER_SAVE_REGS:45000,45000 EVEN_REG:45000,45000 VFP_LO_REGS:0,0 ALL_REGS:50000,50000 MEM:10000,10000
+
+   Insn 35(l0): point = 0
+   Insn 34(l0): point = 2
+   Insn 33(l0): point = 4
+   Insn 27(l0): point = 6
+   Insn 26(l0): point = 8
+   Insn 21(l0): point = 10
+   Insn 20(l0): point = 12
+   Insn 15(l0): point = 14
+   Insn 14(l0): point = 16
+   Insn 8(l0): point = 18
+   Insn 7(l0): point = 20
+   Insn 6(l0): point = 22
+ a0(r118): [3..22]
+ a1(r120): [7..8]
+ a2(r123): [6..6]
+ a3(r124): [6..6]
+ a4(r114 [0]): [9..12]
+ a4(r114 [1]): [11..12]
+Compressing live ranges: from 25 to 6 - 24%
+Ranges after the compression:
+ a0(r118): [0..5]
+ a1(r120): [2..3]
+ a2(r123): [1..1]
+ a3(r124): [1..1]
+ a4(r114 [0]): [4..5]
+ a4(r114 [1]): [4..5]
++++Allocating 48 bytes for conflict table (uncompressed size 48)
+;; a0(r118,l0) conflicts:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a1(r120,l0) conflicts:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a2(r123,l0) conflicts: a3(r124,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a3(r124,l0) conflicts: a2(r123,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a4(r114,l0) conflicts:
+;;   subobject 0:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+
+;;   subobject 1:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+
+  cp0:a1(r120)<->a4(r114)@1000:move
+  regions=1, blocks=3, points=6
+    allocnos=5 (big 1), copies=1, conflicts=0, ranges=6
+
+**** Allocnos coloring:
+
+
+  Loop 0 (parent -1, header bb2, depth 0)
+    bbs: 2
+    all: 0r118 1r120 2r123 3r124 4r114
+    modified regnos: 114 118 120 123 124
+    border:
+    Pressure: GENERAL_REGS=4 VFP_REGS=2
+    Hard reg set forest:
+      0:( 0-12 14 16-79)@0
+        1:( 16-47)@20000
+        2:( 0-12 14)@80000
+      Spill a0(r118,l0)
+      Allocno a1r120 of GENERAL_REGS(14) has 14 avail. regs  0-12 14, node:  0-12 14 (confl regs =  13 15-107)
+      Allocno a2r123 of GENERAL_REGS(14) has 14 avail. regs  0-12 14, node:  0-12 14 (confl regs =  13 15-107)
+      Allocno a3r124 of GENERAL_REGS(14) has 14 avail. regs  0-12 14, node:  0-12 14 (confl regs =  13 15-107)
+      Allocno a4r114 of VFP_LO_REGS(32) has 32 avail. regs  16-47, node:  16-47 obj 0 (confl regs =  0-15 48-107),  obj 1 (confl regs =  0-15 48-107)
+      Forming thread from colorable bucket:
+        Forming thread by copy 0:a1r120-a4r114 (freq=1000):
+          Result (freq=6000): a1r120(3000) a4r114(3000)
+      Pushing a3(r124,l0)(cost 0)
+      Pushing a2(r123,l0)(cost 0)
+      Pushing a1(r120,l0)(cost 0)
+      Pushing a4(r114,l0)(cost 0)
+      Popping a4(r114,l0)  --         assign reg 30
+      Popping a1(r120,l0)  --         assign reg 3
+      Popping a2(r123,l0)  --         assign reg 3
+      Popping a3(r124,l0)  --         assign reg 2
+Disposition:
+    4:r114 l0    30    0:r118 l0   mem    1:r120 l0     3    2:r123 l0     3
+    3:r124 l0     2
+New iteration of spill/restore move
++++Costs: overall 32000, reg 0, mem 32000, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+testing
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0] 107 [ra_auth_code]
+;;  hardware regs used 	 13 [sp] 102 [sfp] 103 [afp]
+;;  regular block artificial uses 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;;  eh block artificial uses 	 11 [fp] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 11 [fp] 13 [sp] 14 [lr] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 102 [sfp] 103 [afp]
+;;  exit block uses 	 11 [fp] 13 [sp] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 12 [ip] 13 [sp] 14 [lr] 100 [cc]
+;;  ref usage 	r0={7d,3u} r1={5d,1u} r2={4d} r3={4d} r11={1d,2u} r12={6d} r13={1d,5u} r14={4d} r15={3d} r16={4d} r17={4d} r18={4d} r19={4d} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r48={3d} r49={3d} r50={3d} r51={3d} r52={3d} r53={3d} r54={3d} r55={3d} r56={3d} r57={3d} r58={3d} r59={3d} r60={3d} r61={3d} r62={3d} r63={3d} r64={3d} r65={3d} r66={3d} r67={3d} r68={3d} r69={3d} r70={3d} r71={3d} r72={3d} r73={3d} r74={3d} r75={3d} r76={3d} r77={3d} r78={3d} r79={3d} r80={3d} r81={3d} r82={3d} r83={3d} r84={3d} r85={3d} r86={3d} r87={3d} r88={3d} r89={3d} r90={3d} r91={3d} r92={3d} r93={3d} r94={3d} r95={3d} r96={3d} r97={3d} r98={3d} r99={3d} r100={4d} r101={3d} r102={1d,11u,4e} r103={1d,1u} r104={3d} r105={3d} r106={3d} r107={3d} r114={1d,2u} r118={1d,2u} r120={1d,2u} r123={1d} r124={1d} 
+;;    total ref usage 314{281d,29u,4e} in 29{26 regular + 3 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 13 2 NOTE_INSN_FUNCTION_BEG)
+(note 13 2 31 2 NOTE_INSN_DELETED)
+(note 31 13 5 2 NOTE_INSN_DELETED)
+(debug_insn 5 31 6 2 (debug_marker) "../reduced.cpp":21:3 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 118)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -8 [0xfffffffffffffff8]))) "../reduced.cpp":21:5 7 {*arm_addsi3}
+     (expr_list:REG_EQUIV (plus:SI (reg/f:SI 102 sfp)
+            (const_int -8 [0xfffffffffffffff8]))
+        (nil)))
+(insn 7 6 8 2 (set (reg:SI 0 r0)
+        (reg/f:SI 118)) "../reduced.cpp":21:5 765 {*arm_movsi_vfp}
+     (expr_list:REG_EQUAL (plus:SI (reg/f:SI 102 sfp)
+            (const_int -8 [0xfffffffffffffff8]))
+        (nil)))
+(call_insn 8 7 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >) [0 __ct_comp  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":21:5 295 {*call_value_symbol}
+     (expr_list:REG_UNUSED (reg:SI 0 r0)
+        (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >)
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 9 8 10 2 (debug_marker) "../reduced.cpp":22:3 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI this (plus:SI (reg/f:SI 102 sfp)
+        (const_int -8 [0xfffffffffffffff8]))) "../reduced.cpp":22:3 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "../reduced.cpp":9:10 -1
+     (nil))
+(debug_insn 12 11 14 2 (debug_marker) "../reduced.cpp":10:9 -1
+     (nil))
+(insn 14 12 15 2 (set (reg:SI 0 r0)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -24 [0xffffffffffffffe8]))) "../reduced.cpp":10:11 7 {*arm_addsi3}
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >) [0 __ct_comp  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":10:11 295 {*call_value_symbol}
+     (expr_list:REG_UNUSED (reg:SI 0 r0)
+        (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1BC1Ev") [flags 0x41]  <function_decl 0x71c032529700 __ct_comp >)
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(debug_insn 16 15 17 2 (debug_marker) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 17 16 18 2 (var_location:SI this (plus:SI (reg/f:SI 102 sfp)
+        (const_int -16 [0xfffffffffffffff0]))) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 18 17 19 2 (var_location:SI other (plus:SI (reg/f:SI 102 sfp)
+        (const_int -24 [0xffffffffffffffe8]))) "../reduced.cpp":11:9 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker:BLK) "../reduced.cpp":13:5 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:V2SI 114 [ vect__5.8 ])
+        (mem/c:V2SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM <vector(2) unsigned int> [(void *)&dummy]+0 S8 A64])) "../reduced.cpp":13:27 1082 {*neon_movv2si}
+     (expr_list:REG_EQUIV (mem/c:V2SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM <vector(2) unsigned int> [(void *)&dummy]+0 S8 A64])
+        (nil)))
+(insn 21 20 22 2 (set (mem/c:V2SI (plus:SI (reg/f:SI 102 sfp)
+                (const_int -16 [0xfffffffffffffff0])) [0 MEM <vector(2) unsigned int> [(void *)&D.6228]+0 S8 A64])
+        (reg:V2SI 114 [ vect__5.8 ])) "../reduced.cpp":13:19 1082 {*neon_movv2si}
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "../reduced.cpp":14:9 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:SI this (mem/f/c:SI (plus:SI (reg/f:SI 102 sfp)
+            (const_int -24 [0xffffffffffffffe8])) [2 dummy.d+0 S4 A64])) "../reduced.cpp":14:9 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker:BLK) "../reduced.cpp":3:8 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "../reduced.cpp":3:15 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 120 [ _16 ])
+        (subreg:SI (reg:V2SI 114 [ vect__5.8 ]) 0)) "../reduced.cpp":3:33 765 {*arm_movsi_vfp}
+     (expr_list:REG_DEAD (reg:V2SI 114 [ vect__5.8 ])
+        (nil)))
+(insn 27 26 28 2 (parallel [
+            (set (mem/v:SI (reg:SI 120 [ _16 ]) [-1  S4 A32])
+                (unspec_volatile:SI [
+                        (plus:SI (mem/v:SI (reg:SI 120 [ _16 ]) [-1  S4 A32])
+                            (const_int 1 [0x1]))
+                        (const_int 0 [0])
+                    ] VUNSPEC_ATOMIC_OP))
+            (clobber (reg:CC 100 cc))
+            (clobber (reg:SI 123))
+            (clobber (reg:SI 124))
+        ]) "../reduced.cpp":3:33 3103 {atomic_addsi}
+     (expr_list:REG_DEAD (reg:SI 120 [ _16 ])
+        (expr_list:REG_UNUSED (reg:SI 124)
+            (expr_list:REG_UNUSED (reg:SI 123)
+                (expr_list:REG_UNUSED (reg:CC 100 cc)
+                    (nil))))))
+(debug_insn 28 27 29 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":14:15 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":11:18 -1
+     (nil))
+(debug_insn 30 29 33 2 (var_location:SI other (clobber (const_int 0 [0]))) "../reduced.cpp":11:18 -1
+     (nil))
+(insn 33 30 34 2 (set (reg:SI 1 r1)
+        (plus:SI (reg/f:SI 102 sfp)
+            (const_int -16 [0xfffffffffffffff0]))) "../reduced.cpp":11:18 discrim 1 7 {*arm_addsi3}
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 0 r0)
+        (reg/f:SI 118)) "../reduced.cpp":11:18 discrim 1 765 {*arm_movsi_vfp}
+     (expr_list:REG_DEAD (reg/f:SI 118)
+        (expr_list:REG_EQUAL (plus:SI (reg/f:SI 102 sfp)
+                (const_int -8 [0xfffffffffffffff8]))
+            (nil))))
+(call_insn 35 34 36 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("_ZN1B9insertOneES_") [flags 0x41]  <function_decl 0x71c032529200 insertOne>) [0 insertOne S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../reduced.cpp":11:18 discrim 1 294 {*call_symbol}
+     (expr_list:REG_DEAD (reg:SI 1 r1)
+        (expr_list:REG_DEAD (reg:SI 0 r0)
+            (expr_list:REG_CALL_DECL (symbol_ref:SI ("_ZN1B9insertOneES_") [flags 0x41]  <function_decl 0x71c032529200 insertOne>)
+                (nil))))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(debug_insn 36 35 39 2 (var_location:SI this (clobber (const_int 0 [0]))) "../reduced.cpp":22:15 -1
+     (nil))
+(note 39 36 0 NOTE_INSN_DELETED)
