@@ -35,7 +35,7 @@ template <class T> struct QMovableArrayOps : QArrayDataPointer<T> {
   };
   template <typename... Args> void emplace(int i, Args &&...) {
     T tmp(std::forward<Args>()...);
-    Inserter(this, i, 1).insertOne(std::move(tmp));
+    Inserter(this, i, 1).insertOne(tmp);
   }
 };
 
@@ -49,9 +49,6 @@ template <class> struct QArrayDataPointer {
   QArrayDataPointer(QArrayDataPointer &other) : d(other.d), ptr(other.ptr) {
     d->ref();
   }
-  QArrayDataPointer(QArrayDataPointer &&other)
-      : d(std::exchange(other.d, nullptr)),
-        ptr(std::exchange(other.ptr, nullptr)) {}
   QCommonArrayOps<int> *operator->();
   QTypedArrayData *d;
   int *ptr;
