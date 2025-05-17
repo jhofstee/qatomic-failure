@@ -1,8 +1,5 @@
-struct QString;
-
 namespace std {
   template <typename _Tp> _Tp forward();
-  template <typename _Tp> QString &&move(_Tp &&);
   template <typename _Tp, typename _Up> _Tp exchange(_Tp __obj, _Up) {
     return __obj;
   }
@@ -26,7 +23,7 @@ template <class T> struct QMovableArrayOps : QArrayDataPointer<T> {
 };
 
 template <class> struct QArrayOpsSelector {
-  typedef QMovableArrayOps<QString> Type;
+  typedef QMovableArrayOps<QArrayDataPointer<char16_t>> Type;
 };
 
 template <class T> struct QCommonArrayOps : QArrayOpsSelector<T>::Type {};
@@ -41,12 +38,8 @@ template <class> struct QArrayDataPointer {
   int size;
 };
 
-struct QString {
-  QArrayDataPointer<char16_t> d;
-} typedef parameter_type;
-
 int main() {
-  QString dirEntry;
+  QArrayDataPointer<char16_t> dirEntry;
   QArrayDataPointer<int> d;
   d->emplace(d->size, dirEntry);
   return 0;
