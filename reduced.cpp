@@ -13,13 +13,9 @@ namespace std {
   };
 }
 
-struct {
-  static void ref(std::atomic &_q_value) { _q_value.fetch_add(1); }
-} typedef Ops;
-
 struct QBasicAtomicInteger {
   std::atomic _q_value;
-  void ref() { Ops::ref(_q_value); }
+  void ref() { _q_value.fetch_add(1); }
 };
 
 struct QTypedArrayData {
