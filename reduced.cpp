@@ -55,17 +55,9 @@ struct QString {
   QArrayDataPointer<char16_t> d;
 } typedef parameter_type;
 
-QArrayDataPointer<int> d;
-template <typename... Args> void emplaceBack(Args &&...) {
-  d->emplace(d->size, std::forward<Args>()...);
-}
-
-struct QList {
-  void operator<<(parameter_type t) { emplaceBack(t); }
-};
-
 int main() {
   QString dirEntry;
-  QList() << dirEntry;
+  QArrayDataPointer<int> d;
+  d->emplace(d->size, dirEntry);
   return 0;
 }
