@@ -5,10 +5,10 @@ struct QTypedArrayData {
 
 template <class> struct QArrayDataPointer;
 template <class T> struct QMovableArrayOps : QArrayDataPointer<T> {
-  void insertOne(T);
+  void insertOne(QArrayDataPointer<char16_t>);
   void emplace() {
-      QArrayDataPointer<char16_t> dummy;
-      insertOne(dummy);
+     QArrayDataPointer<char16_t> dummy;
+     insertOne(dummy);
   }
 };
 
@@ -16,19 +16,17 @@ template <class> struct QArrayOpsSelector {
   typedef QMovableArrayOps<QArrayDataPointer<char16_t>> Type;
 };
 
-template <class T> struct QCommonArrayOps : QArrayOpsSelector<T>::Type {};
 template <class> struct QArrayDataPointer {
   QArrayDataPointer();
   QArrayDataPointer(QArrayDataPointer &other) : d(other.d), ptr(other.ptr) {
     d->ref();
   }
-  QCommonArrayOps<int> *operator->();
   QTypedArrayData *d;
   int *ptr;
 };
 
 int main() {
-  QArrayDataPointer<char16_t> d;
-  d->emplace();
+  QMovableArrayOps<char16_t> d;
+  d.emplace();
   return 0;
 }
