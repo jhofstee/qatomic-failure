@@ -1,10 +1,3 @@
-namespace std {
-  template <typename _Tp> _Tp forward();
-  template <typename _Tp, typename _Up> _Tp exchange(_Tp __obj, _Up) {
-    return __obj;
-  }
-}
-
 struct QTypedArrayData {
   int _M_i;
   void ref() {__atomic_fetch_add(&_M_i, 1, int()); }
