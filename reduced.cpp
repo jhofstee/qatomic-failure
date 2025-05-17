@@ -3,25 +3,22 @@ struct QTypedArrayData {
   void ref() {__atomic_fetch_add(&_M_i, 1, int()); }
 };
 
-struct QArrayDataPointer {
-    QArrayDataPointer();
-    QArrayDataPointer(QArrayDataPointer &other) : d(other.d), ptr(other.ptr) {
-        d->ref();
-    }
-    QTypedArrayData *d;
-    int *ptr;
-};
-
-struct QMovableArrayOps : QArrayDataPointer {
-  void insertOne(QArrayDataPointer);
+struct QMovableArrayOps  {
+  QMovableArrayOps();
+  void insertOne(QMovableArrayOps);
   void emplace() {
-     QArrayDataPointer dummy;
+     QMovableArrayOps dummy;
      insertOne(dummy);
   }
+  QMovableArrayOps(QMovableArrayOps &other) : d(other.d), ptr(other.ptr) {
+      d->ref();
+  }
+  QTypedArrayData *d;
+  int *ptr;
 };
 
 int main() {
-  QMovableArrayOps d;
-  d.emplace();
+  QMovableArrayOps test;
+  test.emplace();
   return 0;
 }
