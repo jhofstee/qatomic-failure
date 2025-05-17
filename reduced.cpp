@@ -59,7 +59,6 @@ template <class> struct QArrayDataPointer {
 };
 
 struct QString {
-  QString(char *);
   QArrayDataPointer<char16_t> d;
 } typedef parameter_type;
 
@@ -73,7 +72,7 @@ struct QList {
 };
 
 int main() {
-  QString dirEntry("");
+  QString dirEntry;
   QList() << dirEntry;
   return 0;
 }
