@@ -6,21 +6,11 @@ namespace std {
   template <typename _Tp, typename _Up> _Tp exchange(_Tp __obj, _Up) {
     return __obj;
   }
-
-  struct atomic {
-    int _M_i;
-    void fetch_add(int __i) { __atomic_fetch_add(&_M_i, __i, int()); }
-  };
 }
 
-struct QBasicAtomicInteger {
-  std::atomic _q_value;
-  void ref() { _q_value.fetch_add(1); }
-};
-
 struct QTypedArrayData {
-  QBasicAtomicInteger ref_;
-  void ref() { ref_.ref(); }
+  int _M_i;
+  void ref() {__atomic_fetch_add(&_M_i, 1, int()); }
 };
 
 template <class> struct QArrayDataPointer;
