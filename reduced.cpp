@@ -16,9 +16,9 @@ template <class T> struct QMovableArrayOps : QArrayDataPointer<T> {
     Inserter(QArrayDataPointer<T> *, int, int);
     void insertOne(T);
   };
-  template <typename... Args> void emplace(int i, Args &&...) {
-    T tmp(std::forward<Args>()...);
-    Inserter(this, i, 1).insertOne(tmp);
+  void emplace() {
+      QArrayDataPointer<char16_t> dummy;
+      Inserter(this, 0, 1).insertOne(dummy);
   }
 };
 
@@ -35,12 +35,10 @@ template <class> struct QArrayDataPointer {
   QCommonArrayOps<int> *operator->();
   QTypedArrayData *d;
   int *ptr;
-  int size;
 };
 
 int main() {
-  QArrayDataPointer<char16_t> dirEntry;
   QArrayDataPointer<char16_t> d;
-  d->emplace(d->size, dirEntry);
+  d->emplace();
   return 0;
 }
