@@ -40,7 +40,7 @@ template <class> struct QArrayDataPointer {
 
 int main() {
   QArrayDataPointer<char16_t> dirEntry;
-  QArrayDataPointer<int> d;
+  QArrayDataPointer<char16_t> d;
   d->emplace(d->size, dirEntry);
   return 0;
 }
