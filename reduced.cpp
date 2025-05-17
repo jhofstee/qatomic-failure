@@ -12,13 +12,10 @@ struct QTypedArrayData {
 
 template <class> struct QArrayDataPointer;
 template <class T> struct QMovableArrayOps : QArrayDataPointer<T> {
-  struct Inserter {
-    Inserter(QArrayDataPointer<T> *, int, int);
-    void insertOne(T);
-  };
+  void insertOne(T);
   void emplace() {
       QArrayDataPointer<char16_t> dummy;
-      Inserter(this, 0, 1).insertOne(dummy);
+      insertOne(dummy);
   }
 };
 
