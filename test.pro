@@ -1,12 +1,10 @@
-QT = core dbus core-private
-
-#equals(QT_MAJOR_VERSION, 6): QMAKE_CXXFLAGS += -std=c++17
+QT = core
 
 HEADERS = 
 
 SOURCES = \
-    test.cpp \
+    reduced.cpp \
 
 QMAKE_CXXFLAGS *= -ffunction-sections
 QMAKE_LFLAGS *= -Wl,--gc-sections
-
+QMAKE_CXXFLAGS += -O2 -save-temps -fverbose-asm -std=c++17 -fdump-rtl-all
