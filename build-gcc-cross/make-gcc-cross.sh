@@ -29,8 +29,8 @@ export PATH=$INSTALL_PATH/bin:$PATH
 
 # Download packages
 export http_proxy=$HTTP_PROXY https_proxy=$HTTP_PROXY ftp_proxy=$HTTP_PROXY
-wget -nc https://ftp.gnu.org/gnu/binutils/$BINUTILS_VERSION.tar.gz
-wget -nc https://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.gz
+wget -nc https://ftp.gnu.org/gnu/binutils/$BINUTILS_VERSION.tar.xz
+wget -nc https://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.xz
 if [ $USE_NEWLIB -ne 0 ]; then
     wget -nc -O newlib-master.zip https://github.com/bminor/newlib/archive/master.zip || true
     unzip -qo newlib-master.zip
